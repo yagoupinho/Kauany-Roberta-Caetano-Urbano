@@ -1,0 +1,156 @@
+/* IMPORTAÇÃO DE FONTES DO GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PÁGINA E FUNDO COM DEGRADÊ E CORAÇÕES */
+body {
+    min-height: 100vh;
+    color: #2b1a0e; /* Marrom escuro para contraste perfeito */
+    font-family: 'Lora', Georgia, serif; 
+    letter-spacing: 0.3px;
+
+    /* Base do marrom meio-termo */
+    background-color: #baa18a; 
+    
+    /* Padrão matemático de corações em CSS com degradê de fundo */
+    background-image: 
+        radial-gradient(circle at 50% 100%, rgba(43, 26, 14, 0.08) 20%, transparent 20%),
+        radial-gradient(circle at 100% 50%, rgba(43, 26, 14, 0.08) 20%, transparent 20%),
+        radial-gradient(circle at 0% 50%, rgba(43, 26, 14, 0.08) 20%, transparent 20%),
+        /* Degradê suave: começa marrom-café-com-leite e termina em chocolate profundo */
+        linear-gradient(to bottom, #baa18a 0%, #5a3e2b 100%); 
+        
+    background-position: 0 0, 20px 20px, 20px 20px, 0 0;
+    background-size: 40px 40px, 40px 40px, 40px 40px, auto;
+    background-attachment: fixed; /* O fundo com corações fica fixo enquanto rola a página */
+}
+
+/* INTRODUÇÃO */
+.primeira-parte {
+    text-align: center;
+    padding: 120px 20px 70px 20px;
+}
+
+.primeira-parte h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 5rem; /* Título principal bem gigante e imponente */
+    font-weight: 900;
+    color: #2b1a0e;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2); /* Sutil reflexo para destacar do fundo */
+}
+
+.primeira-parte p {
+    max-width: 850px; 
+    margin: 0 auto;
+    font-size: 1.8rem; /* Texto de introdução grande */
+    line-height: 1.8;
+    color: #3d2919;
+    font-style: italic;
+}
+
+/* FOTO PRINCIPAL (BANNER) */
+.foto-principal {
+    padding: 20px 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.foto-principal img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3); /* Sombra mais marcada para saltar do fundo trabalhado */
+}
+
+/* MOMENTOS (SEÇÕES) */
+.momento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px; /* Amplo espaço entre foto e texto */
+    padding: 130px 10%;
+    border-bottom: 1px solid rgba(43, 26, 14, 0.12); /* Divisória muito sutil */
+}
+
+/* FOTO MENOR */
+.foto {
+    flex: 0.8;
+}
+
+.foto img {
+    width: 100%;
+    max-width: 320px; /* Fotos menores levemente ampliadas */
+    border-radius: 18px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito romântico de aproximação ao passar o mouse */
+.foto img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* TEXTO DA SEÇÃO */
+.texto {
+    flex: 1.5;
+}
+
+.texto h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3.5rem; /* Títulos dos momentos grandes e expressivos */
+    font-weight: 800;
+    color: #2b1a0e;
+    margin-bottom: 22px;
+}
+
+.texto p {
+    font-size: 1.65rem; /* Histórias e legendas bem legíveis */
+    line-height: 1.8;
+    color: #3d2919;
+}
+
+/* ALTERNAR LADOS */
+.invertido {
+    flex-direction: row-reverse;
+}
+
+/* FINAL DA PÁGINA */
+.final {
+    text-align: center;
+    padding: 160px 20px;
+    background-color: rgba(255, 255, 255, 0.05); /* Sutil clareada no bloco final */
+}
+
+.final img {
+    width: 300px;
+    border-radius: 18px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.final h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 4rem;
+    color: #2b1a0e;
+    margin-bottom: 25px;
+}
+
+.final p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.65rem;
+    color: #3d2919;
+}
